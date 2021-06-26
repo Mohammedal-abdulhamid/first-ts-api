@@ -1,0 +1,21 @@
+language: generic
+
+#Tell Travis we need docker:
+services:
+  - docker
+
+deploy:
+  provider: elasticbeanstalk
+  region: eu-west-2
+  app: 'first-ts-api'
+  env: 'Firsttsapi-env'
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
+  bucket_name: 'first-ts-api-bucket'
+
+  bucket_path: 'docker'
+
+  on:
+    branch: master
