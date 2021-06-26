@@ -11,7 +11,7 @@ app.all('/*', errInvalidPaths);
 app.use(handleCustomErrors);
 app.use(handleServerErrors);
 
-const { NODE_PORT = 80 } = process.env;
+const { NODE_PORT = 8000 } = process.env;
 
 app.listen(NODE_PORT, () => {
     console.log(`listening on port ${NODE_PORT}`);
