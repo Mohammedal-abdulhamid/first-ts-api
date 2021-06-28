@@ -15,4 +15,5 @@ const { NODE_PORT = 8000 } = process.env;
 
 app.listen(NODE_PORT, () => {
     console.log(`listening on port ${NODE_PORT}`);
+    cosole.log("Hello");
 });
